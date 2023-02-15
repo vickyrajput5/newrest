@@ -1,7 +1,7 @@
 .page-main{
     .takeaway{
         height: 550px;
-        background: linear-gradient(rgba(128, 95, 95, 0.5), rgb(26 17 17 / 50%)), url(../images/takeaway-bg.jpg);
+        background: linear-gradient(rgba(128, 95, 95, 0.5), rgba(26, 17, 17, 0.5)), url(../images/takeaway-bg.jpg);
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
@@ -137,7 +137,7 @@
       }
       .catering{
         
-        background: linear-gradient(rgba(128, 95, 95, 0.5), rgb(26 17 17 / 50%)), url(../images/catering.jpg) !important;
+        background: linear-gradient(rgba(128, 95, 95, 0.5), rgba(26, 17, 17, 0.5)), url(../images/catering.jpg) !important;
         background-size: cover !important;
         background-position: center;
         background-repeat: no-repeat;

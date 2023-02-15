@@ -4,10 +4,7 @@
   .page-main {
         #landing-header{
             $color_1: #fff;
-
-
         .bg-video-wrap {
-          
           overflow: hidden;
           width: 100%;
           height: 100vh;
@@ -69,6 +66,9 @@
                 padding-top: 150px;
                 padding-bottom: 150px;
                 background-image: url(../images/about-lower-bg.webp);
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center;
                 color: #fff;
                 @include max-breakpoints(tablet-small){
                   padding-top: 20px;
@@ -109,7 +109,7 @@
            width: 100%;
            text-decoration: none;
             .card-img-info1{
-              background: linear-gradient(rgba(255, 255, 255, 0.5), rgb(26 17 17 / 50%)), url(../images/card-1.webp);
+              background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(26, 17, 17, 0.5)), url(../images/card-1.webp);
               height: 380px;
               width: 100%;
            display: flex;
@@ -134,13 +134,13 @@
               }
             }
             .card-img-info2{
-              background: linear-gradient(rgba(255, 255, 255, 0.5), rgb(26 17 17 / 50%)), url(../images/card-2.webp);
+              background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(26, 17, 17, 0.5)), url(../images/card-2.webp);
               background-repeat: no-repeat;
               background-position: center;
               background-size: cover;
             }
             .card-img-info3{
-              background: linear-gradient(rgba(255, 255, 255, 0.5), rgb(26 17 17 / 50%)), url(../images/card-3.webp);
+              background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(26, 17, 17, 0.5)), url(../images/card-3.webp);
               background-repeat: no-repeat;
               background-position: center;
               background-size: cover;
@@ -199,7 +199,9 @@
         .contact{
           padding-top: 150px;
           padding-bottom: 70px;
-
+          background-repeat: no-repeat;
+          background-size: cover;
+          background-position: center;
           background-image: url(../images/contact-bg.webp);
           @include max-breakpoints(tablet-small){
            padding-top: 20px;
@@ -242,7 +244,7 @@
                     border-bottom:1.5px solid #3d3232;
                     border-radius: 0px ;
                     &:focus{
-                      box-shadow: 0 0 0 0.25rem rgb(3 3 4 / 66%);
+                      box-shadow: 0 0 0 0.25rem rgba(3, 3, 4, 0.66);
                     }
                   }
                   .form-label{
@@ -256,7 +258,7 @@
                       border-bottom:1.5px solid #3d3232;
                       border-radius: 0px ;
                       &:focus{
-                        box-shadow: 0 0 0 0.25rem rgb(3 3 4 / 66%);
+                        box-shadow: 0 0 0 0.25rem rgba(3, 3, 4, 0.66);
                       }
                     }
                   }
