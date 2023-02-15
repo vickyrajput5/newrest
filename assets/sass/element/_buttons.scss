@@ -1,0 +1,111 @@
+/* Multiple buttons styling */
+@mixin btn {
+  width: fit-content;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  @include flex-c-c;
+}
+
+@mixin btn-large {
+  @include btn();
+  min-height: 45px;
+  padding: 0 29px;
+  @include button-L;
+  border: 1px solid transparent;
+  @include max-breakpoints(tablet-small) {
+    min-height: 39px;
+    padding: 0 19px;
+  }
+}
+
+@mixin btn-medium {
+  @include btn();
+  min-height: 39px;
+  padding: 0 19px;
+  @include button-M;
+  border: 1px solid transparent;
+  @include max-breakpoints(tablet-small) {
+    min-height: 31px;
+    padding: 0 14px;
+  }
+}
+
+@mixin primary-btn {
+  background: $color-13;
+  color: $color-6;
+  border: 1px solid $color-1;
+  &:hover,
+  &:active,
+  &:focus {
+    background: $color-1;
+    color: $color-13;
+  }
+}
+
+@mixin secondary-btn {
+  background: transparent;
+  color: $color-12;
+  border: 1px solid $color-12;
+  &:hover,
+  &:active,
+  &:focus {
+    background: $color-12;
+    color: $color-1;
+  }
+}
+
+@mixin tertiary-btn {
+  background: $color-1;
+  color: $color-13;
+  border: 1px solid $color-1;
+}
+
+/* button-large-medium */
+%primary-btn-large {
+  @include btn-large();
+  @include primary-btn();
+}
+
+%secondary-btn-large {
+  @include btn-large();
+  @include secondary-btn();
+}
+
+%tertiary-btn-large {
+  @include btn-large();
+  @include tertiary-btn();
+}
+
+/* button-medium-small */
+%primary-btn-medium {
+  @include btn-medium();
+  @include primary-btn();
+}
+
+%secondary-btn-medium {
+  @include btn-medium();
+  @include secondary-btn();
+}
+
+%tertiary-btn-medium {
+  @include btn-medium();
+  @include tertiary-btn();
+}
+
+@mixin mainButton {
+  width: 300px;
+  height: 70px;
+  background-color: transparent;
+  border: 2px solid #3d3d3d;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  @include flex-c-c;  
+  @include Fjalla;
+  font-size: 16px;
+  margin: auto;
+  &:hover{
+    background-color: #3d3232;
+    color: #fff;
+  }   
+   
+}

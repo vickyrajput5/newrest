@@ -1,0 +1,61 @@
+/* Global Title/content font styling */
+
+
+
+
+h1 {
+  @include h1;
+}
+
+h2 {
+  @include h2;
+}
+
+h3 {
+  @include h3;
+  &::after {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    @include max-breakpoints(tablet) {
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+    @include max-breakpoints(tablet-small) {
+      margin-top: 5px;
+      margin-bottom: 5px;
+    }
+  }
+}
+
+h4 {
+  @include h4;
+}
+
+h5 {
+  @include h5;
+}
+
+.heading {
+  @include heading;
+}
+
+.nav-text,
+.sub-heading {
+  @include sub-heading;
+}
+
+.caption {
+  @include caption;
+}
+
+.label {
+  @include label;
+}
+
+.link {
+  @include button-M;
+  line-height: 11px;
+  text-decoration: underline;
+  color: $color-4;
+  transition: all 0.3s ease;
+}

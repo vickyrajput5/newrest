@@ -1,0 +1,88 @@
+/* Styling of owl carousel */
+.owl-carousel {
+  display: block;
+  .owl-stage-outer {
+    overflow: hidden;
+    .owl-stage {
+      display: flex;
+      .owl-item {
+        li {
+          img {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+
+  .owl-nav {
+    display: none;
+    [class*="owl-"] {
+      position: absolute;
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 10;
+      @include flex-c;
+      background: $color-9;
+      overflow: hidden;
+
+      &.owl-prev {
+        left: 0;
+
+        &::before {
+          @include svgIcon("left-arrow-icon", 11, 17);
+          margin: 0 auto;
+        }
+
+        &:hover {
+          &::before {
+            animation: arrowAnimation 0.3s ease-in-out reverse forwards;
+          }
+        }
+      }
+
+      // animation of next-btn
+      &.owl-next {
+        right: 0;
+
+        &::before {
+          @include svgIcon("right-arrow-icon", 11, 17);
+          margin: 0 auto;
+        }
+
+        &:hover {
+          &::before {
+            animation: arrowAnimation 0.3s ease-in-out forwards;
+          }
+        }
+      }
+    }
+  }
+
+  .owl-dots {
+    display: none;
+    width: 100%;
+    margin-top: 20px;
+    @include max-breakpoints(mobile) {
+      @include flex-c-c;
+    }
+    .owl-dot {
+      width: 7px;
+      height: 7px;
+      background: $color-11;
+      margin-right: 3px;
+      border-radius: 50%;
+
+      &:last-child {
+        margin-right: 0;
+      }
+
+      &.active {
+        background: $color-1;
+      }
+    }
+  }
+}

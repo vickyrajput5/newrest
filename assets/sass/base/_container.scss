@@ -1,0 +1,17 @@
+/* Container */
+.container {
+  max-width: 1270px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 15px;
+  @include max-breakpoints(tablet-small) {
+    padding: 0 10px;
+  }
+}
+
+.row {
+  display: flex;
+  @include max-breakpoints(tablet-small) {
+    flex-wrap: wrap;
+  }
+}

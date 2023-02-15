@@ -1,0 +1,200 @@
+/*Importing google font */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Marcellus&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap');
+/* Marcellus font-weight */
+@mixin Marcellus--regular {
+  font-family: "Marcellus", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Poppins font-weight */
+@mixin poppins--regular {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+@mixin poppins--medium {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+@mixin poppins--semi-bold {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+@mixin poppins--bold {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+@mixin Shadows {
+  font-family: 'Shadows Into Light', cursive;
+  font-weight: 700;
+  font-style: normal;
+}
+@mixin Fjalla {
+  font-family: 'Fjalla One', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Font details */
+/* Font H1 */
+@mixin h1 {
+  font-size: 60px;
+  line-height: 80px;
+  letter-spacing: -1.5px;
+  @include Marcellus--regular();
+  @include max-breakpoints(tablet-small) {
+    font-size: 36px;
+    line-height: 52px;
+  }
+}
+@mixin mainHead{
+  text-align: center;
+          color: $color_1;
+          
+          
+          z-index: 3;
+
+         
+          height: 50px;
+          @include Shadows();
+          
+          @include max-breakpoints(tablet-small){
+            width: 80%;
+          }
+}
+/* Font H2 */
+@mixin h2 {
+  font-size: 42px;
+  line-height: 52px;
+  letter-spacing: -1.5px;
+  @include Marcellus--regular();
+  @include max-breakpoints(tablet-small) {
+    font-size: 27px;
+    line-height: 36px;
+    letter-spacing: 0em;
+  }
+}
+
+/* Font H3 */
+@mixin h3 {
+  font-size: 36px;
+  line-height: 40px;
+  letter-spacing: 0em;
+  @include Marcellus--regular();
+  @include max-breakpoints(tablet-small) {
+    font-size: 26px;
+    line-height: 28px;
+    letter-spacing: -0.5px;
+  }
+}
+
+/* Font H4 */
+@mixin h4 {
+  font-size: 24px;
+  line-height: 32px;
+  letter-spacing: -0.5px;
+  @include Marcellus--regular();
+  @include max-breakpoints(tablet-small) {
+    font-size: 18px;
+    line-height: 28px;
+  }
+}
+
+/* Font H5 */
+@mixin h5 {
+  font-size: 16px;
+  line-height: 28px;
+  letter-spacing: 0em;
+  @include Marcellus--regular();
+  @include max-breakpoints(tablet-small) {
+    font-size: 13px;
+    line-height: 24px;
+  }
+}
+
+/* Font heading */
+@mixin heading {
+  font-size: 16px;
+  line-height: 24px;
+  @include poppins--medium();
+  @include max-breakpoints(tablet-small) {
+    font-size: 14px;
+  }
+}
+
+/* Font sub heading */
+@mixin sub-heading {
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  @include poppins--medium();
+  @include max-breakpoints(tablet-small) {
+    font-size: 11px;
+    letter-spacing: 0.5px;
+  }
+}
+
+/* Font large & medium */
+@mixin button-L {
+  @include Marcellus--regular();
+  font-size: 13px;
+  line-height: 1;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+/* Font medium & small */
+@mixin button-M {
+  @include Marcellus--regular();
+  font-size: 13px;
+  line-height: 1;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  @include max-breakpoints(tablet-small) {
+    font-size: 11px;
+  }
+}
+
+/* Font Body Text */
+@mixin bodytext {
+  @include poppins--regular();
+  font-size: 15px;
+  line-height: 26px;
+  @include max-breakpoints(tablet-small) {
+    font-size: 13px;
+    line-height: 24px;
+  }
+}
+
+/* Font Label */
+@mixin label {
+  @include poppins--regular();
+  font-size: 13px;
+  line-height: 16px;
+  letter-spacing: 0.1px;
+  @include max-breakpoints(tablet-small) {
+    font-size: 12px;
+  }
+}
+
+/* Font Caption */
+@mixin caption {
+  @include poppins--medium();
+  font-size: 11px;
+  line-height: 16px;
+  letter-spacing: 0.1px;
+  @include max-breakpoints(tablet-small) {
+    font-size: 10px;
+  }
+}

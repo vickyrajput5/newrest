@@ -1,0 +1,288 @@
+
+footer{
+  background-image: url(../images/about-lower-bg.webp);
+  color: #fff !important;
+  .flex{
+    .flex-content{
+      h3{
+        color: aliceblue;
+        @include Fjalla;
+        font-size: 24px;
+      }
+    }
+  }
+}
+$color_1: var(--primary);
+$color_2: var(--secondary);
+$color_3: var(--lite);
+$color_4: var(--white);
+$color_5: var(--gray);
+$font-family_1: 'Poppins', sans-serif;
+$background-color_1: var(--primary);
+$background-color_2: transparent;
+$background-color_3: var(--secondary);
+$background-color_4: #334f6c;
+
+/***************************
+            DEFAULT
+****************************/
+/***************************
+               FOOTER
+****************************/
+
+
+.title {
+	color: $color_1;
+}
+.flex {
+	display: flex;
+}
+.fixed_flex {
+	display: flex;
+}
+.flex-content {
+	width: 100%;
+	position: relative;
+}
+.padding_1x {
+	padding: 1rem;
+}
+.padding_2x {
+	padding: 2rem;
+}
+.padding_3x {
+	padding: 3rem;
+}
+.padding_4x {
+	padding: 4rem;
+}
+.btn {
+	padding: 0.8rem 2rem;
+	border-radius: 5px;
+	text-align: center;
+	font-weight: 500;
+	text-transform: uppercase;
+}
+.btn_1 {
+	border: 1px solid var(--primary);
+	background-color: $background-color_1;
+	color: $color_2;
+	&:hover {
+		background-color: $background-color_2;
+		color: $color_1;
+	}
+}
+.btn_2 {
+	border: 1px solid var(--secondary);
+	background-color: $background-color_3;
+	color: $color_1;
+	&:hover {
+		border: 1px solid var(--primary);
+		background-color: $background-color_1;
+		color: $color_2;
+	}
+}
+footer {
+	background-color: $background-color_1;
+	color: $color_3;
+	h3 {
+		color: $color_4;
+		margin-bottom: 1.5rem;
+	}
+	a {
+		color: $color_3;
+		display: block;
+		margin: 15px 0;
+		&:hover {
+			color: $color_4;
+		}
+	}
+	fieldset {
+		padding: 0;
+		input {
+			background-color: $background-color_4;
+			border: 0;
+			color: $color_3;
+			padding: 1rem;
+		}
+		.btn {
+			border-radius: 0;
+			border: 0;
+		}
+		.btn_2 {
+			&:hover {
+				background-color: $background-color_3;
+				border: 0;
+				color: $color_1;
+			}
+		}
+	}
+	.flex {
+		&:last-child {
+			align-items: center;
+			.flex-content {
+				&:last-child {
+					text-align: right;
+				}
+			}
+			p {
+				color: $color_4;
+			}
+			a {
+				width: 40px;
+				display: inline-block;
+				background-color: $background-color_4;
+				color: $color_4;
+				padding: 0.5rem;
+				margin-right: 3px;
+				text-align: center;
+				&:hover {
+					background-color: $background-color_3;
+					color: $color_5;
+				}
+			}
+		}
+	}
+}
+@media (max-width:920px) {
+	.flex {
+		flex-wrap: wrap;
+	}
+	.padding_1x {
+		padding: 1rem;
+	}
+	.padding_2x {
+		padding: 1rem;
+	}
+	.padding_3x {
+		padding: 1rem;
+	}
+	.padding_4x {
+		padding: 1rem;
+	}
+	.btn {
+		padding: 0.5rem 1rem;
+	}
+	a {
+		font-size: 12px;
+	}
+	p {
+		font-size: 12px;
+	}
+	footer {
+		.flex {
+			&:last-child {
+				.flex-content {
+					&:last-child {
+						text-align: left;
+					}
+				}
+			}
+		}
+	}
+}
+@media (max-width:1100px) {
+	footer {
+		.flex {
+			&:first-child {
+				flex-wrap: wrap;
+				.flex-content {
+					flex: 1 1 40%;
+				}
+			}
+		}
+	}
+}
+@media (max-width:320px) {
+	footer {
+		.flex {
+			&:first-child {
+				.flex-content {
+					flex: 1 1 100%;
+				}
+			}
+		}
+	}
+}
+
+$color_1: #ccc;
+$color_2: #ffc700;
+$color_3: #deb217;
+$color_4: #c59b08;
+
+/* Modified from: https://github.com/mukulkant/Star-rating-using-pure-css */
+.rate {
+	float: left;
+	height: 46px;
+	padding: 0 10px;
+	&:not(:checked) {
+		>input {
+			position: absolute;
+			top: -9999px;
+		}
+		>label {
+			float: right;
+			width: 1em;
+			overflow: hidden;
+			white-space: nowrap;
+			cursor: pointer;
+			font-size: 30px;
+			color: $color_1;
+			&:before {
+				content: '★ ';
+			}
+			&:hover {
+				color: $color_3;
+				~ {
+					label {
+						color: $color_3;
+					}
+				}
+			}
+		}
+	}
+	>input {
+		&:checked {
+			~ {
+				label {
+					color: $color_2;
+					&:hover {
+						color: $color_4;
+						~ {
+							label {
+								color: $color_4;
+							}
+						}
+					}
+				}
+			}
+			+ {
+				label {
+					&:hover {
+						color: $color_4;
+						~ {
+							label {
+								color: $color_4;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	>label {
+		&:hover {
+			~ {
+				input {
+					&:checked {
+						~ {
+							label {
+								color: $color_4;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

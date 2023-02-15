@@ -1,0 +1,270 @@
+.page-main{
+    .takeaway{
+        height: 550px;
+        background: linear-gradient(rgba(128, 95, 95, 0.5), rgb(26 17 17 / 50%)), url(../images/takeaway-bg.jpg);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        .container{
+            .takeaway-section{
+               @include flex-c-c;
+                flex-direction: column;
+                margin: auto;
+                h1{
+                    @include mainHead;
+                    font-size: 70px;
+                    width: 100%;
+                    font-weight: 400;
+                    margin-bottom: 50px;
+                    @include max-breakpoints(tablet){
+                        height: auto;
+                        margin-bottom: 10px;
+                        font-size: 50px;
+                      }
+                      @include max-breakpoints(tablet){
+                        width: 100%;
+                        font-size: 40px;
+                      }
+                }
+                p{
+                    font-size: 14px;
+                    @include poppins--regular;
+                    color: #fff;
+                    width: 90%;
+                    text-align: center;
+                 
+                }
+                .catering-btn{
+                    padding-top: 20px;
+                    a{
+                        @include mainButton;
+                        background-color: #fff;
+                        color: #171a17;
+                    }
+                }
+            }
+        }
+    }
+    .sandwich{
+        background-color: rgba(128,140,116,.1)!important;
+       padding-top: 10px;
+       
+          .sandwich-section{
+            overflow: hidden;
+            .img-col{
+                padding-right: 0px;
+                img{
+                    @include max-breakpoints(tablet){
+                        padding-left: 15px;
+                        padding-right: 25px;
+                    }
+                }
+            }
+            .img-col-2{
+                padding-left: 0px;
+                img{
+                    @include max-breakpoints(tablet){
+                        padding-left: 25px;
+                        padding-right: 15px;
+                    }
+                }
+            }
+            .sandwich-info{
+                margin: auto;
+                padding-right: 20px;
+                @include max-breakpoints(tablet){
+                    padding-left: 15px;
+                    padding-right: 15px;
+                    padding-bottom: 20px;
+                }
+              .sandwich-title{
+                padding-top: 30px;
+                padding-bottom: 10px;
+                @include max-breakpoints(tablet){
+                    padding-left: 10px;
+                  
+                }
+               h4{
+                font-size: 34px;
+                @include Fjalla;
+                @include max-breakpoints(tablet-small){
+                    font-size: 25px;
+                }
+               }
+              }
+              .sandwich-details{
+                @include flex-c-sb;
+                .left-details{
+                 
+                  .sandwich-description{
+                    p{
+                      @include poppins--regular;
+                      padding-right: 5px;
+                    }
+                  }
+                  .sandwich-btn{
+                    @include mainButton;
+                    margin: unset;
+                    width: 235px;
+                    height: 60px;
+                  }
+                
+              }
+              .bar{
+                width: 100%;
+                height: 2px;
+                background-color: rgb(80, 78, 76);
+                margin-bottom: 15px;
+
+              }
+            }
+          }
+        
+        }
+      }
+      .sandwich2{
+        padding-top: 0px;
+        .d-flex{
+            padding-left: 100px;
+            padding-right: 40px;
+            
+            @include max-breakpoints(tablet){
+                padding-left: 10px;
+                padding-right: 10px;
+                order: 2;
+            }
+        }
+      }
+      .catering{
+        
+        background: linear-gradient(rgba(128, 95, 95, 0.5), rgb(26 17 17 / 50%)), url(../images/catering.jpg) !important;
+        background-size: cover !important;
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+      .gallery-info{
+        @include spacing-section-100;
+        .container{
+            .gallery-title{
+                h1{
+                    font-size: 35px;
+                    @include Fjalla;
+                    text-align: center;
+                   
+                }
+                p{
+                    font-size: 16px;
+                    @include poppins--regular;
+                    text-align: center;
+                }
+            }
+        }
+      }
+      $color_1: orange;
+$background-color_1: rgba(0,0,0,.7);
+
+.card-container {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+	grid-gap: 10px;
+	
+	padding: 10px;
+	overflow: hidden;
+}
+.card {
+	position: relative;
+	display: grid;
+	height: 250px;
+    cursor: pointer;
+	overflow: hidden;
+	border-radius: 2px;
+	box-shadow: 2px 4px 8px rgba(59,38,0,.6);
+    transition: all ease-in-out .6s;
+	&:hover {
+        transition: all ease-in-out .6s;
+		&::after {
+			content: '';
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			right: 0;
+			left: 0;
+			background-color: $background-color_1;
+		}
+		.card-img {
+			scale: 1.5;
+            transition: all ease-in-out .6s;
+		}
+		
+	}
+}
+.card-img {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+.card-text {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 3rem;
+	color: $color_1;
+	opacity: 0;
+	z-index: 1;
+}
+.contact-details{
+    @include spacing-section-70;
+    .container{
+        .contact-section{
+            width: 70%;
+            margin: auto;
+            @include flex-sb;
+            @include max-breakpoints(tablet){
+                width: 100%;
+            }
+            @include max-breakpoints(mobile){
+                flex-direction: column
+            }
+            .left-block{
+                .contact-title{
+                    h3{
+                        @include Fjalla;
+                        
+                    }
+                    b{
+                        @include Fjalla; 
+                        padding-bottom: 10px;
+                    }
+                    P{
+                        @include poppins--semi-bold;
+
+                    }
+                    a{
+                        @include poppins--semi-bold;
+                        color: #171a17;
+                        padding-bottom: 15px;
+                    }
+                }
+            }
+            .right-block{
+                .opening-title{
+                    h3{
+                        @include Fjalla;
+                    }
+                    .days{
+                        @include Fjalla;
+                        
+                    }
+                    
+                    .time{
+                        @include poppins--semi-bold;
+
+                    }
+                    
+                }
+            }
+        }
+    }
+}
+}
